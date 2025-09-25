@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arath Rodriguez Muñoz - Artista Plástico</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">Arath Rodriguez Muñoz</h1>
+        <nav class="nav">
+          <a href="#acerca" class="nav-link">Acerca de mí</a>
+          <a href="#galeria" class="nav-link">Galería</a>
+          <a href="#contacto" class="nav-link">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h2 class="hero-title">Arte que cuenta historias</h2>
+            <p class="hero-subtitle">
+              Explorando la belleza a través del color y la forma
+            </p>
+            <a href="#galeria" class="btn-primary">Ver mi obra</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="acerca" class="about">
+        <div class="container">
+          <div class="about-content">
+            <div class="about-image">
+              <img
+                src="assets/img/Arath_Pintor.png"
+                alt="Arath Rodriguez Muñoz - Artista Plástico"
+                class="artist-photo"
+              />
+            </div>
+            <div class="about-text">
+              <h2>Acerca de mí</h2>
+              <p class="about-description">
+                Soy Arath Rodriguez Muñoz, un joven artista plástico de 21 años
+                apasionado por el arte y la expresión visual. Actualmente
+                estudio la licenciatura en Artes Plásticas, donde exploro
+                diferentes técnicas y estilos para desarrollar mi propia voz
+                artística.
+              </p>
+              <p class="about-description">
+                Cada una de mis obras es el resultado de un proceso creativo
+                donde busco transmitir emociones, contar historias y capturar
+                momentos que merecen ser recordados. Mi trabajo se inspira en la
+                literatura, la naturaleza y las experiencias cotidianas que nos
+                rodean.
+              </p>
+              <div class="about-stats">
+                <div class="stat">
+                  <span class="stat-number">21</span>
+                  <span class="stat-label">Años</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">3</span>
+                  <span class="stat-label">Obras</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">∞</span>
+                  <span class="stat-label">Historias</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="galeria" class="gallery">
+        <div class="container">
+          <h2 class="section-title">Mi Galería</h2>
+          <p class="section-subtitle">Cada obra cuenta una historia única</p>
+
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <div class="gallery-image">
+                <img
+                  src="assets/img/Diana_V1.jpg"
+                  alt="Diana - Obra artística"
+                  loading="lazy"
+                />
+                <div class="gallery-overlay">
+                  <h3 class="gallery-title">Diana</h3>
+                  <p class="gallery-description">
+                    Una representación mitológica que captura la esencia de la
+                    diosa de la caza
+                  </p>
+                  <button
+                    class="btn-secondary"
+                    onclick="openModal('Diana_V1.jpg', 'Diana', 'Una representación mitológica que captura la esencia de la diosa de la caza y la naturaleza.')"
+                  >
+                    Ver detalles
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery-item">
+              <div class="gallery-image">
+                <img
+                  src="assets/img/Quijote_V1.jpg"
+                  alt="Quijote - Obra artística"
+                  loading="lazy"
+                />
+                <div class="gallery-overlay">
+                  <h3 class="gallery-title">Quijote</h3>
+                  <p class="gallery-description">
+                    Inspirado en el ingenioso hidalgo, una obra que representa
+                    la lucha contra molinos de viento
+                  </p>
+                  <button
+                    class="btn-secondary"
+                    onclick="openModal('Quijote_V1.jpg', 'Quijote', 'Inspirado en el ingenioso hidalgo, una obra que representa la lucha contra molinos de viento y la búsqueda de ideales.')"
+                  >
+                    Ver detalles
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery-item">
+              <div class="gallery-image">
+                <img
+                  src="assets/img/Reloj_V1.jpg"
+                  alt="Reloj - Obra artística"
+                  loading="lazy"
+                />
+                <div class="gallery-overlay">
+                  <h3 class="gallery-title">Reloj</h3>
+                  <p class="gallery-description">
+                    Una reflexión sobre el tiempo y su paso inexorable
+                  </p>
+                  <button
+                    class="btn-secondary"
+                    onclick="openModal('Reloj_V1.jpg', 'Reloj', 'Una reflexión sobre el tiempo y su paso inexorable, capturando la esencia del momento presente.')"
+                  >
+                    Ver detalles
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="contact">
+        <div class="container">
+          <div class="contact-content">
+            <h2>¿Interesado en adquirir una obra?</h2>
+            <p class="contact-description">
+              Cada pintura es única y está creada con dedicación y pasión. Si
+              deseas adquirir alguna de mis obras o tienes alguna pregunta, no
+              dudes en contactarme.
+            </p>
+
+            <div class="contact-info">
+              <div class="contact-item">
+                <h3>Información de contacto</h3>
+                <p><strong>Artista:</strong> Arath Rodriguez Muñoz</p>
+                <p>
+                  <strong>Email:</strong>
+                  <a href="mailto:arath.rodriguez@email.com"
+                    >arath.rodriguez@email.com</a
+                  >
+                </p>
+                <p>
+                  <strong>Teléfono:</strong>
+                  <a href="tel:+52551234567">+52 55 1234 5678</a>
+                </p>
+              </div>
+
+              <div class="contact-item">
+                <h3>Disponibilidad</h3>
+                <p>Las obras están disponibles para venta directa.</p>
+                <p>Envío nacional e internacional.</p>
+                <p>Precios desde $500 MXN</p>
+              </div>
+            </div>
+
+            <div class="contact-form">
+              <h3>Envíame un mensaje</h3>
+              <form id="contactForm">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Tu nombre"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Tu email"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    placeholder="Tu mensaje"
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn-primary">
+                  Enviar mensaje
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 Arath Rodriguez Muñoz. Todos los derechos reservados.</p>
+        <p class="footer-note">Arte creado con pasión y dedicación</p>
+      </div>
+    </footer>
+
+    <!-- Modal para ver detalles de las obras -->
+    <div id="imageModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" src="" alt="" />
+        <div class="modal-info">
+          <h3 id="modalTitle"></h3>
+          <p id="modalDescription"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
