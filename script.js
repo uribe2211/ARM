@@ -178,3 +178,28 @@ function openModal(imageSrc, title, description) {
   modal.style.display = "block";
   document.body.style.overflow = "hidden";
 }
+
+// Theme switcher
+const themeSwitch = document.getElementById('checkbox');
+const body = document.body;
+
+// Apply the cached theme on reload
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+    body.classList.add(savedTheme);
+    if (savedTheme === 'dark-mode') {
+        themeSwitch.checked = true;
+    }
+} else {
+    body.classList.add('light-mode');
+}
+
+themeSwitch.addEventListener('change', () => {
+    if (themeSwitch.checked) {
+        body.classList.replace('light-mode', 'dark-mode');
+        localStorage.setItem('theme', 'dark-mode');
+    } else {
+        body.classList.replace('dark-mode', 'light-mode');
+        localStorage.setItem('theme', 'light-mode');
+    }
+});

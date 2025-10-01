@@ -8,22 +8,35 @@
 :root {
   /* Paleta minimalista: azules, verdes y grises */
   --primary-color: #2c3e50; /* Gris azulado oscuro */
-  --secondary-color: #3498db; /* Azul claro minimalista */
-  --accent-color: #27ae60; /* Verde esmeralda */
+  --secondary-color: #0056B3; /* Azul claro minimalista */
+  --accent-color: #1E8449; /* Verde esmeralda */
   --text-color: #2c3e50; /* Gris azulado principal */
-  --text-light: #7f8c8d; /* Gris medio */
+  --text-light: #5a6569; /* Gris medio */
   --background-color: #ecf0f1; /* Gris muy claro */
   --background-light: #ffffff; /* Blanco puro */
   --border-color: #bdc3c7; /* Gris claro para bordes */
   --shadow: 0 2px 8px rgba(44, 62, 80, 0.1); /* Sombra sutil gris */
   --shadow-hover: 0 4px 16px rgba(44, 62, 80, 0.15); /* Sombra suave */
   --transition: all 0.3s ease;
-  --green-primary: #27ae60;
-  --green-light: #2ecc71;
-  --green-dark: #229954;
+  --green-primary: #1E8449;
+
+  --green-dark: #A9DFBF;
   --gray-light: #ecf0f1;
   --gray-medium: #95a5a6;
   --gray-dark: #2c3e50;
+}
+
+.dark-mode {
+  --primary-color: #ffffff;
+  --secondary-color: #3498db;
+  --accent-color: #27ae60;
+  --text-color: #ecf0f1;
+  --text-light: #bdc3c7;
+  --background-color: #2c3e50;
+  --background-light: #34495e;
+  --border-color: #4a6278;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
 body {
@@ -33,6 +46,71 @@ body {
   background-color: var(--background-color);
   position: relative;
   overflow-x: hidden;
+}
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--accent-color);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--accent-color);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 .container {
@@ -154,7 +232,7 @@ body {
   display: inline-block;
   padding: 10px 25px;
   background-color: var(--accent-color);
-  color: white;
+  color: var(--primary-color);
   text-decoration: none;
   border-radius: 4px;
   font-weight: 500;
@@ -431,7 +509,6 @@ body {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  outline: none;
   border-color: var(--secondary-color);
   box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1);
 }
